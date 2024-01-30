@@ -1,0 +1,174 @@
+Practical Task: Comprehensive Bookstore Management
+System
+Objective:
+Develop a comprehensive Bookstore Management System
+incorporating various Python topics, including data structures, file
+operations, and control structures.
+Tasks:
+User Authentication:
+● Implement a login system using conditional statements
+and boolean variables.
+● Ask the user to input their username and password.
+● Check if the entered credentials match predefined values.
+Grant access if valid, otherwise, display an error message.
+Directory Management:
+● Use the OS module to create a directory named
+"BookstoreData."
+● Inside this directory, create subdirectories for "Books" and
+"Customers."
+Data Initialization:
+● Create a CSV file named "books.csv" inside the "Books"
+directory.
+● Populate the CSV file with sample data representing books,
+including columns for title, author, publication year, and
+price.
+● Create another CSV file named "customers.csv" inside the
+"Customers" directory.
+● Populate the "customers.csv" file with sample data,
+including columns for customer name, email, and order
+history.
+List, Tuple, and Set Operations:
+● Implement a function to convert the data from "books.csv"
+into a list of tuples.
+● Use a set to store unique authors from the list of books.
+● Display the list of books, unique authors, and a tuple
+representing a customer's order history.
+Dictionary Operations:
+● Create a dictionary to represent the details of a specific
+book based on the user's input.
+● Implement a function to convert the data from
+"customers.csv" into a dictionary where each customer's
+name is a key and their details are values.
+● Display information about a specific customer based on the
+user's input.
+File Operations:
+● Implement a function to read the content of a file and
+display it.
+● Implement a function to write data to a file.
+● Use file operations to store and retrieve data related to
+books and customers.
+JSON Serialization:
+● Create a JSON file named "inventory.json" in the
+"BookstoreData" directory.
+● Serialize the data from "books.csv" into JSON format and
+save it in "inventory.json."
+● Implement a function to read the JSON data and display it.
+Order Processing and File Updates:
+● Allow a customer to place an order by selecting a book
+from the available inventory.
+● Update the customer's order history in the "customers.csv"
+file.
+● Update the book inventory in the "inventory.json" file.
+● Implement a function to read and display the updated order
+history and book inventory.
+Conditional Statements and String Manipulation:
+● Use conditional statements to check if a requested book is
+in stock before processing the order.
+● Implement conditional statements for dynamic discount
+calculation based on the total order value.
+● Use string manipulation to extract the initials of an author's
+name.
+Control Structures and User Interaction:
+● Implement a while loop for continuous user interaction.
+● Allow users to navigate through pages of book listings
+using a for loop.
+● Implement search functionality using strings and display
+matching results.
+Additional Challenges (Optional):
+● Implement error handling for file operations, user input, and data
+inconsistencies.
+● Allow the user to search for books or customers based on
+specific criteria.
+● Explore using the os.path module for path manipulations.
+Submission:
+Submit a Python script (.py file) containing the comprehensive
+implementation of the Bookstore Management System. Include
+comments explaining the purpose and functionality of each function.
+Provide sample input and output to demonstrate the functionality of
+your program.
+
+
+Task Steps
+Step 1: User Authentication
+Display the welcome message.
+Display the main menu options:
+● Login
+● Exit
+Prompt the user to choose an option and handle their choice.
+If the user chooses to login:
+● Ask for their username and password.
+● Check the credentials, and if valid, proceed to the next
+menu.
+Step 2: Main Menu Options
+Display the main menu options after successful login:
+● Display Books
+● Place Order
+● Display Inventory
+● Logout
+Step 3: Display Books
+If the user chooses to display books:
+● Retrieve the list of books from the database.
+● Display the books in a formatted manner.
+● Return to the main menu.
+Step 4: Place Order
+If the user chooses to place an order:
+● Prompt the user to enter the book title and quantity.
+● Check if the book is in stock.
+● Update the inventory and customer order history.
+● Display a success message.
+● Return to the main menu.
+Step 5: Display Inventory
+If the user chooses to display inventory:
+● Retrieve the inventory data.
+● Display the current stock for each book.
+● Return to the main menu.
+Step 6: Logout
+If the user chooses to logout:
+● Display a logout success message.
+● Return to the main menu.
+Step 7: Exit
+If the user chooses to exit:
+● Display a farewell message.
+● End the program.
+
+.....................
+Terminal example:
+Welcome to the Online Bookstore Management System
+1. Login
+2. Exit
+Enter your choice: 1
+Username: user123
+Password: ********
+Login Successful!
+Menu:
+1. Display Books
+2. Place Order
+3. Display Inventory
+4. Logout
+Enter your choice: 1
+List of Books:
+1. Title: Python Programming, Author: John Smith, Price: $29.99
+2. Title: Data Structures in Python, Author: Emily Johnson, Price: $24.95
+...
+Enter your choice: 2
+Place Order:
+Enter Book Title: Python Programming
+Enter Quantity: 2
+Order Placed Successfully!
+Menu:
+1. Display Books
+2. Place Order
+3. Display Inventory
+4. Logout
+Enter your choice: 3
+Inventory:
+- Book: Python Programming, Stock: 8
+- Book: Data Structures in Python, Stock: 12
+...
+Enter your choice: 4
+Logout Successful!
+Menu:
+1. Login
+2. Exit
+Enter your choice: 2
+Goodbye! Thank you for using the Online Bookstore Management System.
