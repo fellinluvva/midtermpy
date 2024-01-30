@@ -85,8 +85,11 @@ def initialize_inventory_json():
 
 # every time update data in json
 def update_inventory(book_title, quantity):
-    with open("BookstoreData/inventory.json", mode="r") as file:
-        inventory_data = json.load(file)
+    try:
+        with open("BookstoreData/inventory.json", mode="r") as file:
+            inventory_data = json.load(file)
+    except (FileNotFoundError, json.decoder.JSONDecodeError):
+        inventory_data = {}
 
     if book_title in inventory_data:
         inventory_data[book_title] += quantity
@@ -120,7 +123,7 @@ def place_order():
     # search and add quantity to data
     for book in books_data:
         if book[0] == title:
-            stock = int(book[3])
+            stock = float(book[3])
             if stock >= quantity:
                 stock -= quantity
                 book[3] = str(stock)
